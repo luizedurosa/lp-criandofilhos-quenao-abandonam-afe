@@ -6,7 +6,6 @@
   <title>Criando Filhos que Não Abandonam a Fé</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Sugestão de fonte: Montserrat ou Lato -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -94,6 +93,8 @@
       transition: background 0.2s;
       margin-top: 12px;
       box-shadow: 0 2px 8px rgba(45,58,74,0.08);
+      text-decoration: none;
+      display: inline-block;
     }
     .cta-button:hover {
       background: #1a2330;
@@ -114,6 +115,24 @@
       .cta-button { font-size: 1rem; padding: 14px 20px; }
     }
   </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1246559503074849');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1246559503074849&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
   <div class="container">
@@ -192,7 +211,18 @@
     </div>
 
     <div class="cta">
-      <a href="#inscricao" class="cta-button">Quero participar do seminário</a>
+      <!-- 
+        Substitua o link abaixo pelo link real do seu checkout.
+        O evento 'Lead' e 'InitiateCheckout' serão disparados ao clicar no botão.
+      -->
+      <a 
+        href="https://pay.hotmart.com/O99847336C?off=7lnp5050" 
+        class="cta-button"
+        id="cta-participar"
+        onclick="fbq('track', 'Lead'); fbq('track', 'InitiateCheckout');"
+        target="_blank"
+        rel="noopener"
+      >Quero participar do seminário</a>
     </div>
   </div>
 </body>
